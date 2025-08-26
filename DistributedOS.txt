@@ -2,17 +2,3 @@ A Distributed Operating System is an OS that manages a group of independent comp
 In this setup, the resources such as processors, memory, and storage are distributed across multiple machines, 
 but the OS coordinates them so that users and applications experience it as one coherent system. 
 It improves resource sharing, reliability, and performance by distributing workloads across different nodes.
-
-Advantages:
-
-Resource sharing: Efficient utilization of distributed resources (CPU, storage, printers, etc.).
-High reliability: Even if one node fails, others can continue functioning.
-Scalability: Easy to add more machines to the system.
-Improved performance: Tasks can be executed in parallel across nodes.
-
-Disadvantages:
-
-Complexity: Designing and managing a distributed OS is highly complex.
-Security issues: More vulnerable since resources are shared over a network.
-Communication delay: Network latency can affect performance.
-Cost: Requires more sophisticated hardware and networking.
