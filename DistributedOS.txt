@@ -2,3 +2,4 @@ A Distributed Operating System is an OS that manages a group of independent comp
 In this setup, the resources such as processors, memory, and storage are distributed across multiple machines, 
 but the OS coordinates them so that users and applications experience it as one coherent system. 
 It improves resource sharing, reliability, and performance by distributing workloads across different nodes.
+

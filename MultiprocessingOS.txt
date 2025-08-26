@@ -1,0 +1,18 @@
+A Multiprocessing Operating System is one that supports the use of two or more processors (CPUs) within a single computer system. 
+In this OS, tasks are divided among multiple processors that work in parallel, 
+which significantly improves the system’s performance, speed, and reliability. 
+Each processor can execute different instructions independently, or they can work together on a single task to reduce execution time.
+
+Advantages:
+
+High performance due to parallel execution of tasks.
+Better reliability—if one processor fails, others can still continue.
+Increased throughput since multiple processes are executed simultaneously.
+Efficient resource utilization as processors are not left idle.
+
+Disadvantages:
+
+High cost due to the need for multiple CPUs and supporting hardware.
+Complex design for communication and synchronization between processors.
+OS complexity—requires advanced scheduling and resource management.
+Not all tasks can be efficiently parallelized, limiting performance gain.
