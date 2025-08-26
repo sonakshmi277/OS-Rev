@@ -1,0 +1,15 @@
+A Batch Operating System is one of the earliest types of operating systems where similar jobs are grouped together and executed sequentially without user interaction. 
+In this system, the user prepares jobs with instructions, submits them to the computer operator, and the OS executes them in batches. 
+This eliminates the need for manual intervention during execution and improves overall system utilization compared to manual job processing.
+
+Advantages:
+
+Increases throughput since jobs are processed in groups.
+Reduces idle time of CPU as the next job is automatically loaded once one finishes.
+Best suited for large jobs requiring similar types of processing.
+
+Disadvantages:
+
+No direct interaction between user and computer during execution, leading to delays in debugging.
+Difficult to prioritize tasks, so urgent jobs cannot be executed immediately.
+Turnaround time can be high because jobs must wait for the entire batch to complete.
