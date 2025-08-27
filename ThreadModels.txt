@@ -1,0 +1,18 @@
+There are mainly three thread models used for mapping user-level threads (ULTs) to kernel-level threads (KLTs):
+    Many-to-One:
+        Multiple ULTs are mapped to a single KLT.
+        It is efficient since thread management is done in user space.
+
+        However, it has major drawbacks: if one thread makes a blocking system call, the entire process is blocked, 
+        and there is no parallelism on multiprocessors.
+
+    One-to-One:
+        Each ULT maps directly to a KLT.
+        This allows true parallelism and ensures that if one thread blocks, others can still run.
+        The downside is higher overhead, since thread creation and switching involve the kernel.
+
+    Many-to-Many:
+
+        Multiple ULTs are multiplexed over a smaller or equal number of KLTs.
+        This provides scalability, parallelism, and avoids the blocking issue of Many-to-One.
+        However, it is more complex to implement.
