@@ -1,0 +1,43 @@
+1. What a semaphore is
+
+A semaphore is basically a tool used by the operating system to manage access to shared resources like printers, files, or memory when multiple processes are running at the same time. 
+Without it, two processes might try to use the same resource simultaneously, causing errors—this is called a race condition.
+Think of it like a traffic signal for processes: it decides who can go (access the resource) and who has to wait.
+
+2. How it works
+
+A semaphore is an integer variable, and we only change it using atomic operations (operations that are done fully without interruption). 
+There are two operations:
+
+    wait (P / down):
+        The process wants to access a resource.
+        The semaphore value decreases by 1.
+        If the value goes below 0, it means the resource is busy, so the process waits.
+
+    signal (V / up):
+        The process finishes using the resource.
+        The semaphore value increases by 1.
+        If any processes were waiting, one of them gets a chance to use the resource.
+
+💡 Analogy:
+
+    Imagine a bathroom with 2 stalls: semaphore = 2.
+    Person enters → wait → stalls decrease (1 left).
+    Person leaves → signal → stalls increase (2 now available).
+
+3. Types of semaphores
+
+    Counting Semaphore:
+        Can be 0, 1, 2, …
+        Used when multiple instances of a resource exist.
+        Example: 3 printers in an office → semaphore initialized to 3.
+
+    Binary Semaphore (Mutex):
+        Can only be 0 or 1.
+        Used for mutual exclusion, meaning only one process at a time can access the resource.
+        Example: Only one person can use a single ATM at a time.
+
+✅ Key takeaway:
+
+Counting semaphore = multiple resources
+Binary semaphore = one resource, exclusive access

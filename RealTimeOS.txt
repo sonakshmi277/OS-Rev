@@ -1,0 +1,9 @@
+A Real-Time Operating System (RTOS) is an operating system designed to process data and respond to inputs within a strict, predefined time constraint. 
+It is used in systems where timely execution is critical, such as embedded systems, robotics, medical devices, and industrial control systems. 
+RTOS focuses on predictability and reliability rather than just throughput.
+
+There are two types:
+
+Hard real-time OS: Missing a deadline is unacceptable (e.g., pacemakers, airbag systems).
+Soft real-time OS: Occasional deadline misses are tolerable but performance should be consistent (e.g., video streaming, online games).
+

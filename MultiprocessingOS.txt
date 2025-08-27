@@ -2,3 +2,4 @@ A Multiprocessing Operating System is one that supports the use of two or more p
 In this OS, tasks are divided among multiple processors that work in parallel, 
 which significantly improves the system’s performance, speed, and reliability. 
 Each processor can execute different instructions independently, or they can work together on a single task to reduce execution time.
+
