@@ -1,0 +1,7 @@
+Threads in operating systems are primarily of two types: user-level threads (ULT) and kernel-level threads (KLT). 
+User-level threads are managed by a user-level thread library, so the kernel is unaware of them. 
+They are fast to create and manage but can block the entire process if one thread performs a blocking system call. 
+Kernel-level threads, on the other hand, are managed directly by the OS kernel. 
+They are slower to create and manage due to system overhead but are more powerful, as the OS can schedule them 
+independently on multiple processors, and a blocking system call by one thread does not block other threads in 
+the same process. Some systems also implement hybrid threading, combining the advantages of both.

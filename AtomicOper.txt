@@ -1,0 +1,8 @@
+Atomic operations are operations that are executed completely or not at all, without any possibility of interruption. 
+In operating systems, they are crucial for process synchronization when multiple processes or threads access shared 
+resources concurrently. 
+Atomic operations ensure that no other process can observe the resource in an inconsistent state while the operation is 
+being performed. 
+Common examples include incrementing or decrementing a shared counter, or the wait (P) and signal (V) operations on a semaphore. 
+Because atomic operations are indivisible, 
+they help prevent race conditions and maintain data consistency in critical sections.

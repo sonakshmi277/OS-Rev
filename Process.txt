@@ -1,0 +1,13 @@
+There are two types of processes:
+    Single-threaded processes
+        Contain only one thread of execution.
+        They have one program counter (PC), one stack, and one set of registers.
+        At any given time, the process can do only one task.
+        Example: A simple text editor that only edits files sequentially.
+
+    Multi-threaded processes
+
+        Contain multiple threads within the same process.
+        All threads share the same code, data, and resources, but each thread has its own PC, registers, and stack.
+        This allows tasks to run concurrently (like handling user input, background saving, and spell check simultaneously).
+        Example: A modern web browser where different threads handle UI, rendering, and network requests.

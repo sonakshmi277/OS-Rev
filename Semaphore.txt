@@ -1,6 +1,7 @@
 1. What a semaphore is
 
-A semaphore is basically a tool used by the operating system to manage access to shared resources like printers, files, or memory when multiple processes are running at the same time. 
+A semaphore is basically a tool used by the operating system to manage access to shared resources like printers, files, 
+or memory when multiple processes are running at the same time. 
 Without it, two processes might try to use the same resource simultaneously, causing errors—this is called a race condition.
 Think of it like a traffic signal for processes: it decides who can go (access the resource) and who has to wait.
 
@@ -18,12 +19,6 @@ There are two operations:
         The process finishes using the resource.
         The semaphore value increases by 1.
         If any processes were waiting, one of them gets a chance to use the resource.
-
-💡 Analogy:
-
-    Imagine a bathroom with 2 stalls: semaphore = 2.
-    Person enters → wait → stalls decrease (1 left).
-    Person leaves → signal → stalls increase (2 now available).
 
 3. Types of semaphores
 

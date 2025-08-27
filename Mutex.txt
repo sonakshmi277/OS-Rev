@@ -1,0 +1,6 @@
+Mutex: A mutex (short for mutual exclusion) is a synchronization primitive used to ensure that only 
+    one thread or process can access a critical section or shared resource at a time. 
+       It acts like a lock: when a thread wants to enter the critical section, it must acquire (lock) the mutex. 
+       If the mutex is already locked by another thread, the current thread must wait (block) until it becomes available. 
+       Once the thread finishes its task in the critical section, it releases (unlocks) the mutex 
+       so that other threads can proceed. 
