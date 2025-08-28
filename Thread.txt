@@ -3,25 +3,3 @@ program with its own memory space, threads share the same process resources like
 files but have their own program counter, stack, and registers. Threads allow a process to perform multiple tasks 
 concurrently, improving CPU utilization and application responsiveness. For example, in a web browser, one thread 
 may handle user input while another downloads data in the background.
-
-Advantages:
-    Faster context switching compared to processes.
-    Efficient resource sharing since threads within a process share memory.
-    Better performance for multi-core systems due to parallel execution.
-    Improved responsiveness for interactive applications.
-
-Disadvantages:
-    Threads share memory, so a bug in one thread can corrupt shared data.
-    Complex synchronization is needed to avoid race conditions.
-    Debugging is difficult due to concurrent execution.
-
-
-THREAD VS PROCESS
-
-A process is an independent program in execution with its own memory space, code, data, and system resources, 
-whereas a thread is the smallest unit of execution within a process that shares the process’s resources like memory and files 
-but has its own stack, program counter, and registers. Processes are heavier, requiring more overhead for creation and 
-context switching, while threads are lightweight and allow concurrent execution within the same process. 
-Threads are ideal for tasks that need parallelism and responsiveness, whereas processes provide isolation and 
-protection between programs. In short, threads are “lightweight processes” that share resources, 
-while processes are independent execution units with their own resources.
