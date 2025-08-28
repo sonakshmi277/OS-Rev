@@ -1,20 +1,5 @@
-A Clustered System is a type of computer system where two or more independent computers (nodes) are connected and work together as a single system. 
-The operating system manages the cluster so that users experience it as one unit. 
-Clustered systems are mainly used for high availability, load balancing, and parallel processing. 
-If one node fails, others can take over, ensuring reliability and fault tolerance.
-
-
-
-Clustered System
-
-A clustered system is basically multiple computers (nodes) connected and working together as if they are one.
-The main goal is high availability and reliability—so if one machine fails, another takes over.
-Typically used in servers, banking systems, hospital systems, where downtime cannot be tolerated.
-Example: A web server cluster where if one server goes down, another continues serving requests.
-
-Distributed System
-
-A distributed system is where multiple computers are connected via a network, and the OS manages them so users see it as a single system.
-The main goal is resource sharing, scalability, and parallel computation.
-Used in cloud computing, grid computing, big data systems.
-Example: Google Search or Hadoop cluster—tasks are split across many machines to finish faster.
+A Clustered Operating System is a type of operating system designed to manage and coordinate a group of independent computers, called nodes, 
+so that they function together as a single unified system. Each node in the cluster has its own hardware and local operating system, but the 
+clustered OS provides a higher-level management layer that ensures resource sharing, load balancing, and fault tolerance across the entire cluster. 
+From the user’s perspective, the cluster appears as one single system, even though it is composed of multiple machines. This design improves 
+performance, enhances availability, and provides reliability, as if one node fails, others can take over its tasks seamlessly.

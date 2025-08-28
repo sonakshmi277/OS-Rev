@@ -1,3 +1,4 @@
 A Batch Operating System is one of the earliest types of operating systems where similar jobs are grouped together and executed sequentially without user interaction. 
 In this system, the user prepares jobs with instructions, submits them to the computer operator, and the OS executes them in batches. 
 This eliminates the need for manual intervention during execution and improves overall system utilization compared to manual job processing.
++  
