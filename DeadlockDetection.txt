@@ -1,0 +1,51 @@
+Q1. What is deadlock detection in Operating Systems?
+
+A: Deadlock detection is the process of identifying when a set of processes in the system are stuck waiting for each other’s resources indefinitely. 
+The OS uses algorithms like the Banker’s Algorithm or Wait-for Graph to check if the necessary conditions for deadlock exist.
+
+Q2. What are the approaches for deadlock detection?
+
+A:There are two main approaches:
+    Centralized Algorithm:
+        A single entity (usually the OS) is responsible for detecting and resolving deadlocks.
+        Simpler to implement but may face scalability issues.
+    Distributed Algorithm:
+        Multiple processes/nodes cooperate to detect and resolve deadlocks.
+        More scalable and efficient for large systems, but more complex to implement.
+
+Q3. What is a Wait-for Graph (WFG)?
+
+A:A Wait-for Graph is derived from the Resource-Allocation Graph (RAG).
+    In a WFG, nodes represent processes, and an edge P1 → P2 indicates that process P1 is waiting for a resource currently held by process P2.
+    If a cycle exists in the WFG, it confirms the presence of a deadlock.
+
+Q4. What happens if a system has only one instance of a resource type?
+
+A:If resources have only a single instance, deadlock detection and recovery are not required.
+  This is because no two processes can simultaneously compete for multiple instances of the same resource, eliminating the possibility of a deadlock.
+
+Q5. How does deadlock recovery work once a deadlock is detected?
+
+A:Recovery can be done in two ways:
+    Process Termination: Abort one or more processes to break the cycle.
+        Abort all processes in deadlock (brutal but simple).
+        Abort processes one by one until the cycle breaks (less costly).
+    Resource Preemption: Temporarily take resources away from some processes and give them to others until the cycle is resolved.
+        Must decide which resource to preempt, from which process, and ensure fairness.
+
+Q6. What are the trade-offs between centralized and distributed deadlock detection algorithms?
+
+A:Centralized:
+    ✅ Simpler design and implementation.
+    ❌ May not scale well in distributed systems due to bottlenecks.
+
+    Distributed:
+        ✅ Efficient and scalable for large distributed systems.
+        ❌ More complex to implement because processes must coordinate and share resource information.
+
+Q7. What is the role of the Banker’s Algorithm in deadlock detection?
+
+A:The Banker’s Algorithm is used to check system safety and detect possible deadlocks.
+    It works by simulating resource allocation and checking if all processes can eventually complete.
+    If not, the system is in a deadlock state.
+
