@@ -1,0 +1,4 @@
+A Process Control Block (PCB) is a data structure used by the operating system to manage processes. It contains essential information such 
+as the Process ID (unique identifier), process state (running, ready, or waiting), program counter (the address of the next instruction), 
+CPU registers and related execution data, memory management details, and I/O information like open files or devices. These components allow 
+the OS to track, schedule, and control processes effectively, especially during context switching

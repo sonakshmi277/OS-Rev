@@ -1,0 +1,6 @@
+Process scheduling is the activity performed by the operating system to decide which process will execute on the CPU next. Since there are 
+multiple processes competing for limited CPU cores, scheduling ensures fairness, reduces waiting time, and improves overall system utilization 
+and performance. Scheduling is broadly categorized into three types: long-term scheduling, which decides which processes are admitted into the 
+system for execution; medium-term scheduling, which suspends or resumes processes to improve CPU and memory utilization; and short-term scheduling, 
+where the CPU scheduler decides which process runs next on the CPU. The short-term scheduler uses various algorithms like Shortest Job First (SJF), 
+Round Robin, Priority Scheduling, and Multilevel Queue Scheduling to achieve efficiency.

@@ -4,10 +4,10 @@ resource that another process in the same set is holding. In simple words, all t
 
 Q: What are the necessary conditions for deadlock?
 A: According to Coffman’s conditions, four conditions must hold simultaneously for a deadlock to occur:
-    Mutual Exclusion – At least one resource must be non-shareable.
-    Hold and Wait – A process holding one resource can request additional resources.
-    No Preemption – Resources cannot be forcibly taken away.
-    Circular Wait – A circular chain of processes exists where each process waits for a resource held by the next.
+    Mutual exclusion: Resources are held in a non-shareable mode, meaning that only one process can use a resource at a time.
+    Hold and wait: A process is holding at least one resource and waiting for additional resources that are currently being held by other processes.
+    No preemption: Resources cannot be taken away from a process once they have been acquired.
+    Circular wait: Two or more processes are waiting for each other to release resources, resulting in a cycle of waiting.
 
 Q: Can you give a simple example?
 A: Sure. Imagine two processes:
@@ -15,12 +15,23 @@ A: Sure. Imagine two processes:
     P2 holds resource R2 and waits for R1.
     Both are waiting for each other, so they’re stuck forever.
         A real-life analogy is two people eating with two forks: each one has one fork and waits for the other fork to eat — neither can proceed.
+Q: DEADLOCK Detection
+    Deadlock detection involves identifying when a deadlock has occurred in the system. This can be done through the use of algorithms such as Banker's 
+    algorithm or Wait-for-graph algorithm, which check for the presence of necessary conditions for deadlock.
 
+    There are 2 different cases in case of Deadlock detection –
 
-Q: How can deadlocks be handled?
-A: There are four main strategies:
-    Prevention – Ensure that at least one of the Coffman conditions never holds.
-    Avoidance – Use algorithms like the Banker’s Algorithm to allocate resources safely.
-    Detection and Recovery – Allow deadlock to occur, then detect it and recover (e.g., killing processes or resource preemption).
-    Ignore – In some cases (like Windows, Linux), deadlocks are so rare that the system just ignores them.
-
+        Deadlock detection using a centralized algorithm: In this approach, a single entity, such as the operating system, is responsible for 
+        detecting and resolving deadlocks in the system. This entity periodically checks for the presence of deadlocks and takes appropriate action to 
+        resolve them.
+        Deadlock detection using a distributed algorithm: In this approach, multiple entities, such as processes or nodes in a distributed system, work 
+        together to detect and resolve deadlocks. Each entity maintains information about the resources it holds and requests, and communicates with other 
+        entities to detect and resolve deadlocks. This approach can be more efficient and scalable than a centralized approach, but it can also be more 
+        complex to implement.
+Q. DEADLOCK Recovery
+    Killing one or more processes: This is known as the “abort” method, where the operating system kills one or more of the processes involved 
+    in the deadlock in order to release the resources and resolve the deadlock.
+    Resource preemption: This method involves forcibly taking resources from a process and giving them to another process in order to resolve the deadlock.
+    Resource allocation: This method involves changing the way resources are allocated in order to prevent deadlocks from occurring in the future.
+    It’s worth noting that, besides the above mentioned methods, there’s another one called “Rollback” which involves rolling back one or more processes 
+    to a previous state in order to release resources and resolve the deadlock.

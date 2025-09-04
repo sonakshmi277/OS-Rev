@@ -1,0 +1,11 @@
+Memory management can be done in two ways: fixed-size partitioning and variable-size partitioning. In fixed-size partitioning, memory is divided 
+into blocks of fixed size, and processes are allocated to these blocks if available. In variable-size partitioning, memory is not pre-divided; instead, 
+there are holes, which are parts of memory left free by terminated processes or unused areas. These holes are of variable size. The operating system maintains 
+a free list of these holes, and when a process arrives, it allocates memory to the process according to its size from one of these holes. The OS can choose 
+which hole to allocate using four strategies: First Fit, Next Fit, Best Fit, and Worst Fit. In First Fit, the OS allocates the first hole in the list that is 
+large enough, which is simple and fast but may leave small unusable fragments early in memory. Next Fit is similar to First Fit but starts searching from 
+where the last allocation ended, spreading allocation more evenly. Best Fit allocates the smallest hole that is big enough, reducing wasted space but taking 
+longer to search. Worst Fit allocates the largest available hole, leaving bigger leftover holes for future allocations.
+
+
+
