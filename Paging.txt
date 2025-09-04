@@ -1,0 +1,16 @@
+Paging is a memory management scheme in operating systems that allows a computer to store and retrieve data from physical memory (RAM) in fixed-size blocks called pages, 
+instead of requiring contiguous memory space for processes. It helps to avoid problems like external fragmentation and makes memory allocation more flexible.
+
+How Paging Works
+
+CPU generates a logical address (also called virtual address) consisting of:
+    Page number (p) → which page in the process
+    Offset (d) → location within that page
+
+    The Page Table maps the page number to a frame number in physical memory.
+
+    Physical address = Frame number + Offset
+
+    Data is accessed from the corresponding frame in RAM.
+
+    

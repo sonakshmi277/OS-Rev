@@ -1,0 +1,40 @@
+1️⃣ What is TLB?
+    TLB = Translation Lookaside Buffer
+    It’s a special, small, fast cache in the CPU.
+    It stores recent page table entries to speed up logical-to-physical address translation.
+    Without TLB, every memory access needs to look up the page table in RAM, which is slower.
+
+2️⃣ How TLB works in paging
+
+    CPU generates a logical address (page number + offset).
+
+    Step 1: Check TLB
+
+        If the page number is in TLB → TLB hit → use the stored frame number to get physical address (fast).
+
+        If not in TLB → TLB miss → go to main page table in RAM to find the frame number, then store it in TLB for next use.
+
+        Use frame number + offset to get the physical address in RAM.
+
+        ✅ Basically, TLB reduces memory access time by avoiding repeated page table lookups.
+
+Parts of a TLB entry
+
+    Page number (Logical Page Number)
+        This tells the CPU which page in logical memory this entry is for.
+        Example: page 0, page 1, page 2…
+
+    Frame number (Physical Frame Number)
+
+        This tells the CPU which frame in physical memory this page is stored in.
+        Example: frame 3, frame 7…
+
+    Valid bit
+
+        Tells if this entry is currently valid or not.
+        Sometimes a TLB entry might be empty or outdated; valid bit = 1 means valid.
+
+    Optional: Protection bits
+
+        Tell if the page is read-only, read-write, or execute-only.
+        Not all TLBs have this, but some do.
