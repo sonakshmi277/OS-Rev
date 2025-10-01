@@ -1,0 +1,9 @@
+Multiprogramming is a technique where multiple programs are kept in memory at the same time so that the CPU always has a job to execute. 
+When one program is waiting for I/O, the CPU can switch to another program, thereby improving CPU utilization. 
+
+On the other hand, multiprocessing refers to the use of two or more processors within a single system to execute multiple processes 
+simultaneously. A multiprocessing operating system coordinates these processors, distributes tasks among them, and manages synchronization.
+
+In short, multiprogramming improves CPU utilization by switching among programs on a single processor, while multiprocessing achieves 
+actual parallel execution using multiple processors.
+
