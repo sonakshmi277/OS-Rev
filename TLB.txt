@@ -11,11 +11,8 @@
     Step 1: Check TLB
 
         If the page number is in TLB → TLB hit → use the stored frame number to get physical address (fast).
-
         If not in TLB → TLB miss → go to main page table in RAM to find the frame number, then store it in TLB for next use.
-
         Use frame number + offset to get the physical address in RAM.
-
         ✅ Basically, TLB reduces memory access time by avoiding repeated page table lookups.
 
 Parts of a TLB entry
