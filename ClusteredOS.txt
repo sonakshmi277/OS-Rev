@@ -1,5 +1,8 @@
-A Clustered Operating System is a type of operating system designed to manage and coordinate a group of independent computers, called nodes, 
-so that they function together as a single unified system. Each node in the cluster has its own hardware and local operating system, but the 
-clustered OS provides a higher-level management layer that ensures resource sharing, load balancing, and fault tolerance across the entire cluster. 
-From the user’s perspective, the cluster appears as one single system, even though it is composed of multiple machines. This design improves 
-performance, enhances availability, and provides reliability, as if one node fails, others can take over its tasks seamlessly.
+A clustered operating system is when two or more computers (nodes) are connected and work together, typically for high availability 
+and performance.
+
+Each node in the cluster runs its own operating system, but clustering software coordinates them.
+
+The cluster may share storage, and if one node fails, another node takes over (failover).
+
+Transparency is less complete than in a true distributed OS — the user may still know which server they are connected to.
