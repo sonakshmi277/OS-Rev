@@ -1,4 +1,5 @@
 A Time Sharing Operating System allows multiple users to share system resources simultaneously. 
-It uses the concept of time slices, where CPU time is divided into small units and allocated to each user or process in a round-robin or priority-based manner. 
+It uses the concept of time slices, where CPU time is divided into small units and allocated to each user or process in a round-robin or
+priority-based manner. 
 This creates the illusion that each user has their own dedicated system, while in reality, the CPU rapidly switches between tasks. 
 Time sharing OS was designed to provide interactive computing and reduce response time.
