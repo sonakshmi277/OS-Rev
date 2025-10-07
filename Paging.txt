@@ -15,4 +15,4 @@ CPU generates a logical address (also called virtual address) consisting of:
 
     Data is accessed from the corresponding frame in RAM.
 
-    
+  
