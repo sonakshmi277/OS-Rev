@@ -1,0 +1,7 @@
+Segmentation is a memory management technique in which a program is divided into logical segments such as code, data, stack, and 
+functions, each of variable size. A logical address is represented as a pair ⟨segment number, offset⟩. The segment number identifies 
+which segment the address belongs to and is used to index the segment table, which stores the base address (starting physical address 
+of the segment) and limit (size of the segment). The offset specifies the exact location within the segment and is added to the base to 
+obtain the physical address. The limit ensures memory access stays within bounds, preventing illegal access. Segmentation reflects the logical 
+structure of a program, allows easier sharing and protection of memory, but can lead to external fragmentation. It differs from paging, which 
+uses fixed-size blocks and does not correspond to the program’s logical divisions.
